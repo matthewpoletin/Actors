@@ -1,0 +1,73 @@
+# =========================
+# Operating System Files
+# =========================
+
+# Windows
+Desktop.ini
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+# IDE's
+# =========================
+
+#Visual studio
+*.sln
+*.sdf
+*.opensdf
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+*.csproj
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Xcode
+*.xcworkspace
+*.xcodeproj
+
+# =========================
+# C++
+# =========================
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Third Paty libraries
+!tinyxml2.lib
