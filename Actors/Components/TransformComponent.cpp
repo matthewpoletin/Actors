@@ -1,6 +1,6 @@
 #include "TransformComponent.h"
 
-#include "../../Utilities/Logger/Log.h"
+#include "Log.h"
 
 #include <iostream>
 
@@ -10,7 +10,7 @@ namespace liman {
 
 	TransformComponent::TransformComponent()
 	{
-		m_pTransform = new Transform();
+		//m_pTransform = new Transform();
 	}
 
 	bool TransformComponent::Init(tinyxml2::XMLElement* pComponentNode)
@@ -92,9 +92,9 @@ namespace liman {
 
 	void TransformComponent::UpdateTransform()
 	{
-		m_pTransform->SetPos(glm::vec3(m_pos.x, m_pos.y, m_pos.z));
+	/*	m_pTransform->SetPos(glm::vec3(m_pos.x, m_pos.y, m_pos.z));
 		m_pTransform->SetRot(glm::vec3(m_rot.x, m_rot.y, m_rot.z));
-		m_pTransform->SetScale(glm::vec3(m_scale.x, m_scale.y, m_scale.z));
+		m_pTransform->SetScale(glm::vec3(m_scale.x, m_scale.y, m_scale.z));*/
 	}
 
 	void TransformComponent::SetPos(float& posX, float& posY, float posZ)

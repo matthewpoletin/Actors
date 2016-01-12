@@ -10,7 +10,7 @@ namespace liman {
 		m_pCompFactory = new ComponentFactory();
 
 		m_pCompFactory->RegisterComponent<TransformComponent>(ActorComponent::GetIdFromName(TransformComponent::g_Name));
-		m_pCompFactory->RegisterComponent<Renderable>(ActorComponent::GetIdFromName(Renderable::g_Name));
+		//m_pCompFactory->RegisterComponent<Renderable>(ActorComponent::GetIdFromName(Renderable::g_Name));
 	}
 
 	Actor* ActorFactory::CreateActor(tinyxml2::XMLElement* pActorNode, std::string sourceName)
@@ -34,13 +34,13 @@ namespace liman {
 			}
 		}
 
-		Renderable* pRend = pActor->GetComponent<Renderable>(Renderable::g_Name);
+	/*	Renderable* pRend = pActor->GetComponent<Renderable>(Renderable::g_Name);
 		if (pRend && !(pRend->GetMesh()))
 		{
 			pRend->UpdateMesh();
 		}
 
-		g_pApp->GetGameLogic()->GetLevelManager()->InsertActor(pActor);
+		g_pApp->GetGameLogic()->GetLevelManager()->InsertActor(pActor);*/
 
 		return pActor;
 	}

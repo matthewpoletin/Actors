@@ -1,10 +1,12 @@
 #pragma once
 // Transform.h
-#include <glm/glm.hpp>
-#include <glm/gtx/transform.hpp>
+#include <Maths.h>
+
+//#include <glm/glm.hpp>
+//#include <glm/gtx/transform.hpp>
+//#include "../../Graphics/Transform.h"
+
 #include "../ActorComponent.h"
-#include "../../Maths/Maths.h"
-#include "../../Graphics/Transform.h"
 
 namespace liman {
 	
@@ -29,8 +31,8 @@ namespace liman {
 		virtual void GetInfo() override;
 
 	public:
-		void SetTransform(Transform* pTransform) { m_pTransform = pTransform; }
-		Transform* GetTransform() { return m_pTransform; }
+		/*void SetTransform(Transform* pTransform) { m_pTransform = pTransform; }
+		Transform* GetTransform() { return m_pTransform; }*/
 		void UpdateTransform();
 
 	public:
@@ -63,7 +65,7 @@ namespace liman {
 		maths::Vec3f m_rot;
 		maths::Vec3f m_scale;
 
-		Transform* m_pTransform;
+		//Transform* m_pTransform;
 
 	};
 

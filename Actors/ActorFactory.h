@@ -1,21 +1,21 @@
 #pragma once
 // ActorFactory.h - creating actors and its components
 
-#include "../Utilities/Logger/Log.h"
+#include "Log.h"
 
 #include <iostream>
 #include <map>
 #include <tinyxml2/tinyxml2.h>
 
-#include "../Application.h"
-#include "../Subsystems/Logic/BaseLogic.h"
+//#include "../Application.h"
+//#include "../Subsystems/Logic/BaseLogic.h"
 
 #include "ComponentFactory.h"
 
 #include "ActorComponent.h"
 #include "../Actors/Actor.h"
 #include "Components/TransformComponent.h"
-#include "../Graphics/Renderable.h"
+//#include "../Graphics/Renderable.h"
 
 namespace liman {
 

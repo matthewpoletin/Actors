@@ -38,6 +38,10 @@ solution("Actors")
 	end
 	location(working_dir .. "Actors/")
 	includedirs { working_dir .. "Dependencies/Include" }
+	includedirs {
+		working_dir .. "../Log/Log",
+		working_dir .. "../Maths/Maths"
+	}
 
 	if (ide_os == "windows") then
 		platforms { "x32", "x64" }
@@ -55,10 +59,18 @@ solution("Actors")
 	configuration "Debug"
 		libdirs { lib_ide_path, lib_ide_path .. "/Debug" }
 		defines { "DEBUG", "_DEBUG", "_DEBUG_", "Debug" }
+		libdirs { 
+			working_dir .. "../Log/Build/Log/" .. "/Debug",
+			working_dir .. "../Maths/Build/Maths/" .. "/Debug",
+		}
 
 	configuration "Release"
 		libdirs { lib_ide_path, lib_ide_path .. "/Release" }
 		defines { "NDEBUG", "NDebug" }
+		libdirs { 
+			working_dir .. "../Log/Build/Log/" .. "/Release",
+			working_dir .. "../Maths/Build/Maths/" .. "/Release",
+		}
 
 	------------------------------------------------------------
 	-- "Actors" library project
@@ -93,7 +105,7 @@ solution("Actors")
 			flags { "Unicode" }
 			flags { "Optimize" }
 			objdir (working_dir .. "Temp" .. "/Actors" .. "/Release")
-			targetdir (working_dir .. "Build" .. "/Actors" .. "/Debug")
+			targetdir (working_dir .. "Build" .. "/Actors" .. "/Release")
 			if (premake_ver == 5) then optimize "Full" end
 	
 	------------------------------------------------------------------

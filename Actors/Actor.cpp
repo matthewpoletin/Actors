@@ -1,8 +1,9 @@
 #include "Actor.h"
 
-#include "../Graphics/Renderable.h"
+//#include "../Graphics/Renderable.h"
 
-#include "../Utilities/Logger/Log.h"
+#include <Log.h>
+//#include "../Utilities/Logger/Log.h"
 
 namespace liman {
 
@@ -31,7 +32,7 @@ namespace liman {
 	void Actor::AddComponent(ActorComponent* pComponent)
 	{
 		std::pair<ComponentsMap::iterator, bool> success = m_components.insert(std::make_pair(pComponent->GetId(), pComponent));
-		assert(success.second);
+		//assert(success.second);
 	}
 
 	std::string Actor::ToXML()
